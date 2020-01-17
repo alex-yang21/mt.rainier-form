@@ -1,0 +1,8 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <h1> Patient registration forms </h1>
+  {% for form in forms %}
+        {% include '_form.html' %}
+  {% endfor %}
+{% endblock %}

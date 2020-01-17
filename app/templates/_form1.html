@@ -1,0 +1,196 @@
+<table class="table table-hover">
+     <tr>
+         <td>
+           Date: <b>{{ form.timestamp }}</b>
+           <br>
+           <b>Patient name: {{ form.patient_name }}</b>
+           <br>
+          <hr>
+           <b>Overall problem: {{ form.overall_problem }}</b>
+           <br>
+           <b>Headaches: {{ form.headaches }}</b>
+           <br>
+           <b>Headache frequency: {{ form.headaches_frequency }}</b>
+           <br>
+           <b>Headache length: {{ form.headaches_length }}</b>
+           <br>
+           <b>The headache is associated with:</b>
+           <br>
+           <script>
+              if ({{ form.headaches_flashes }} == 1) {
+                document.write('Flashes of light')
+                document.write('<br/>')
+              }
+              if ({{ form.headaches_spots }} == 1) {
+                document.write('Spots')
+              }
+           </script>
+           <br>
+          <hr>
+           <b>Dizziness: {{ form.dizziness }}</b>
+           <br>
+           <b>Unsteady gait: {{ form.unsteady_gait }}</b>
+           <br>
+          <hr>
+           <b>Neck pain: {{ form.neck_pain }}</b>
+           <br>
+           <b>If yes, where does the pain radiate?</b>
+           <br>
+           <script>
+              if ({{ form.neck_pain_arms }} == 1) {
+                document.write('Arms')
+                document.write('<br/>')
+              }
+              if ({{ form.neck_pain_shoulders }} == 1) {
+                document.write('Shoulders')
+              }
+           </script>
+           <br>
+          <hr>
+           <b>Lower back pain: {{ form.back_pain }}</b>
+           <br>
+           <b>If yes, where does the pain radiate?</b>
+           <br>
+           <script>
+              if ({{ form.back_pain_hips }} == 1) {
+                document.write('Hips')
+                document.write('<br/>')
+              }
+              if ({{ form.back_pain_legs }} == 1) {
+                document.write('Legs')
+              }
+           </script>
+           <br>
+           <b>If yes, which side?</b>
+           <br>
+           <script>
+              if ({{ form.back_pain_left_side }} == 1) {
+                document.write('Left')
+                document.write('<br/>')
+              }
+              if ({{ form.back_pain_right_side }} == 1) {
+                document.write('Right')
+              }
+           </script>
+           <br>
+          <hr>
+           <b>Arm pain: {{ form.arm_pain }}</b>
+           <br>
+           <b>If yes, which side?</b>
+           <br>
+           <script>
+              if ({{ form.arm_pain_left_side }} == 1) {
+                document.write('Left')
+                document.write('<br/>')
+              }
+              if ({{ form.arm_pain_right_side }} == 1) {
+                document.write('Right')
+              }
+           </script>
+           <br>
+          <hr>
+           <b>Leg pain: {{ form.leg_pain }}</b>
+           <br>
+           <b>If yes, which side?</b>
+           <br>
+           <script>
+              if ({{ form.leg_pain_left_side }} == 1) {
+                document.write('Left')
+                document.write('<br/>')
+              }
+              if ({{ form.leg_pain_right_side }} == 1) {
+                document.write('Right')
+              }
+           </script>
+           <br>
+          <hr>
+           <b>Do you have any numbness or tingling?</b>
+           <br>
+           <script>
+              if ({{ form.fingers }} == 1) {
+                document.write('Fingers')
+                document.write('<br/>')
+              }
+              if ({{ form.hands }} == 1) {
+                document.write('Hands')
+                document.write('<br/>')
+              }
+              if ({{ form.feet }} == 1) {
+                document.write('Feet')
+                document.write('<br/>')
+              }
+              if ({{ form.legs }} == 1) {
+                document.write('Legs')
+              }
+           </script>
+           <br>
+           <b>If you do experience numbness/tingling?, which side?</b>
+           <br>
+           <script>
+              if ({{ form.numbness_left_side }} == 1) {
+                document.write('Left')
+                document.write('<br/>')
+              }
+              if ({{ form.numbness_right_side }} == 1) {
+                document.write('Right')
+              }
+           </script>
+           <br>
+          <hr>
+           <b>Do you have episodes of fainting/blacking out? {{ form.fainting }}</b>
+           <br>
+           <b>Fainting frequency: {{ form.fainting_frequency }}</b>
+           <br>
+           <b>Fainting length: {{ form.fainting_length }}</b>
+           <br>
+          <hr>
+           <b>Seizure episodes: {{ form.seizure }}</b>
+           <br>
+           <b>Seizure frequency: {{ form.seizure_frequency }}</b>
+           <br>
+           <b>Seizure length: {{ form.seizure_length }}</b>
+           <br>
+           <b>If you are on seizure medication, which one? Are you missing any doses? {{ form.seizure_medication }}</b>
+           <br>
+          <hr>
+           <b>Limb jerking: {{ form.limb_jerking }}</b>
+           <br>
+           <b>Tremors: {{ form.tremors }}</b>
+           <br>
+           <b>If yes, where do you have tremors?</b>
+           <br>
+           <script>
+              if ({{ form.tremors_legs }} == 1) {
+                document.write('Legs')
+                document.write('<br/>')
+              }
+              if ({{ form.tremors_hands }} == 1) {
+                document.write('Hands')
+              }
+           </script>
+           <br>
+           <b>Do the tremors occur while resting or in a specific position? {{ form.tremors_positions }}</b>
+           <br>
+          <hr>
+           <b>Sleep difficulties: {{ form.sleep_difficulties }}</b>
+           <br>
+           <b>Increased stress level: {{ form.increased_stress }}</b>
+           <br>
+           <b>Episodes of confusion: {{ form.episodes_of_confusion }}</b>
+           <br>
+           <b>If yes, how often? {{ form.episodes_of_confusion_optional }}</b>
+           <br>
+           <b>Memory problems: {{ form.memory_problems }}</b>
+           <br>
+          <hr>
+           <b>Have you visited the ER/hospital recently? {{ form.hospital_recently }}</b>
+           <br>
+           <b>If yes, how long did you stay? {{ form.hospital_recently_optional }}</b>
+           <br>
+           <b>Medication changes: {{ form.medication_change }}</b>
+           <br>
+           <b>If yes, what medication did you start using and what medication did you stop using? {{ form.medication_change_optional }}</b>
+           <br>
+         </td>
+     </tr>
+ </table>

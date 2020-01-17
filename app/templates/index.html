@@ -1,0 +1,415 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Patient Registration</h1>
+    <p> Please complete form to the best of your knowledge.
+        All information is confidential.
+    </p>
+    <p>
+        * indicates required fields -- all yes/no questions are required.
+        When listing please separate items with commas.
+    </p>
+    <div class="row">
+        <div class="col-md-4">
+          <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <p>
+              *{{ form.patient_name.label }}<br>
+              {{ form.patient_name(size=32) }}
+              {% for error in form.patient_name.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              *{{ form.sex.label }}<br>
+              {{ form.sex(size=32) }}
+              {% for error in form.sex.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              *{{ form.date_of_birth.label }}<br>
+              {{ form.date_of_birth(size=32) }}
+              {% for error in form.date_of_birth.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              *{{ form.age.label }}<br>
+              {{ form.age(size=32) }}
+              {% for error in form.age.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              *<b>Height (ex - 5'10'' or 5 ft 10 inches)</b><br>
+              {{ form.height(size=32) }}
+              {% for error in form.height.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              *{{ form.weight.label }}<br>
+              {{ form.weight(size=32) }}
+              {% for error in form.weight.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              *{{ form.hand.label }}<br>
+              {{ form.hand(size=32) }}
+              {% for error in form.hand.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+            {{ form.occupation.label }}<br>
+            {{ form.occupation(size=32) }}
+          </p>
+          <p>
+              {{ form.referred_by.label }}<br>
+              {{ form.referred_by(size=32) }}
+          </p>
+          <p>
+              {{ form.reason_for_visit.label }}<br>
+              {{ form.reason_for_visit(size=32) }}
+          </p>
+      <hr>
+          <p><b>*Do you have any of the following symptoms:</b></p>
+          <p>
+            {{ form.limb_jerking.label }}<br>
+            {{ form.limb_jerking(size=32) }}
+            {% for error in form.limb_jerking.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.tremors.label }}<br>
+            {{ form.tremors(size=32) }}
+            {% for error in form.tremors.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.depression.label }}<br>
+            {{ form.depression(size=32) }}
+            {% for error in form.depression.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.headaches.label }}<br>
+            {{ form.headaches(size=32) }}
+            {% for error in form.headaches.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.sleep_difficulties.label }}<br>
+            {{ form.sleep_difficulties(size=32) }}
+            {% for error in form.sleep_difficulties.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.increased_stress.label }}<br>
+            {{ form.increased_stress(size=32) }}
+            {% for error in form.increased_stress.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.memory_problems.label }}<br>
+            {{ form.memory_problems(size=32) }}
+            {% for error in form.memory_problems.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.back_neck_pain.label }}<br>
+            {{ form.back_neck_pain(size=32) }}
+            {% for error in form.back_neck_pain.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.numbness.label }}<br>
+            {{ form.numbness(size=32) }}
+            {% for error in form.numbness.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.numbness_optional.label }}<br>
+            {{ form.numbness_optional(size=32) }}
+          </p>
+          <p>
+            {{ form.head_injury.label }}<br>
+            {{ form.head_injury(size=32) }}
+            {% for error in form.head_injury.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.dizziness.label }}<br>
+            {{ form.dizziness(size=32) }}
+            {% for error in form.dizziness.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.unsteady_gait.label }}<br>
+            {{ form.unsteady_gait(size=32) }}
+            {% for error in form.unsteady_gait.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.balance_difficulties.label }}<br>
+            {{ form.balance_difficulties(size=32) }}
+            {% for error in form.balance_difficulties.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.fainting.label }}<br>
+            {{ form.fainting(size=32) }}
+            {% for error in form.fainting.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.word_finding.label }}<br>
+            {{ form.word_finding(size=32) }}
+            {% for error in form.word_finding.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.episodes_of_confusion.label }}<br>
+            {{ form.episodes_of_confusion(size=32) }}
+            {% for error in form.episodes_of_confusion.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.hospital_recently.label }}<br>
+            {{ form.hospital_recently(size=32) }}
+            {% for error in form.hospital_recently.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.medication_change.label }}<br>
+            {{ form.medication_change(size=32) }}
+            {% for error in form.medication_change.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.other_symptoms.label }}<br>
+            {{ form.other_symptoms(size=32) }}
+          </p>
+      <hr>
+          <p><b>*Do you suffer from any of these diseases:</b></p>
+          <p>
+            {{ form.hypertension.label }}<br>
+            {{ form.hypertension(size=32) }}
+            {% for error in form.hypertension.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.heart_problems.label }}<br>
+            {{ form.heart_problems(size=32) }}
+            {% for error in form.heart_problems.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.diabetes_mellitus.label }}<br>
+            {{ form.diabetes_mellitus(size=32) }}
+            {% for error in form.diabetes_mellitus.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.high_cholesterol.label }}<br>
+            {{ form.high_cholesterol(size=32) }}
+            {% for error in form.high_cholesterol.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.stroke.label }}<br>
+            {{ form.stroke(size=32) }}
+            {% for error in form.stroke.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.seizure.label }}<br>
+            {{ form.seizure(size=32) }}
+            {% for error in form.seizure.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.depression_disease.label }}<br>
+            {{ form.depression_disease(size=32) }}
+            {% for error in form.depression_disease.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.migraine.label }}<br>
+            {{ form.migraine(size=32) }}
+            {% for error in form.migraine.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+      <hr>
+          <p><b>*Habits:</b></p>
+          <p>
+            {{ form.cigarettes.label }}<br>
+            {{ form.cigarettes(size=32) }}
+            {% for error in form.cigarettes.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.cigarettes_long.label }}<br>
+            {{ form.cigarettes_long(size=32) }}
+          </p>
+          <p>
+            {{ form.cigarettes_frequency.label }}<br>
+            {{ form.cigarettes_frequency(size=32) }}
+          </p>
+          <p>
+            {{ form.alcohol.label }}<br>
+            {{ form.alcohol(size=32) }}
+            {% for error in form.alcohol.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.drugs.label }}<br>
+            {{ form.drugs(size=32) }}
+            {% for error in form.drugs.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+      <hr>
+          <p><b>Do you have any medical symptoms related toe the following systems, check and add as needed.</b></p>
+          <p><b>Constitutional:</b></p>
+          <p>
+            {{ form.weight_loss() }} {{ form.weight_loss.label }}
+          </p>
+          <p>
+            {{ form.fever() }} {{ form.fever.label }}
+          </p>
+          <p><b>Cardiovascular:</b></p>
+          <p>
+            {{ form.palpitation() }} {{ form.palpitation.label }}
+          </p>
+          <p>
+            {{ form.chest_pain() }} {{ form.chest_pain.label }}
+          </p>
+          <p><b>Pulmonary:</b></p>
+          <p>
+            {{ form.cough() }} {{ form.cough.label }}
+          </p>
+          <p>
+            {{ form.sputum() }} {{ form.sputum.label }}
+          </p>
+          <p><b>Gastrointestinal:</b></p>
+          <p>
+            {{ form.abdominal_pain() }} {{ form.abdominal_pain.label }}
+          </p>
+          <p>
+            {{ form.nausea() }} {{ form.nausea.label }}
+          </p>
+          <p>
+            {{ form.vomiting() }} {{ form.vomiting.label }}
+          </p>
+          <p>
+            {{ form.diarrhea() }} {{ form.diarrhea.label }}
+          </p>
+          <p><b>Genital urinary:</b></p>
+          <p>
+            {{ form.hematuria() }} {{ form.hematuria.label }}
+          </p>
+          <p>
+            {{ form.urination_incontinence() }} {{ form.urination_incontinence.label }}
+          </p>
+          <p><b>Endocrinological:</b></p>
+          <p>
+            {{ form.over_eating() }} {{ form.over_eating.label }}
+          </p>
+          <p>
+            {{ form.over_sweating() }} {{ form.over_sweating.label }}
+          </p>
+          <p>
+            {{ form.over_urinating() }} {{ form.over_urinating.label }}
+          </p>
+          <p>
+            {{ form.always_thirsty() }} {{ form.always_thirsty.label }}
+          </p>
+          <p><b>Dermatological:</b></p>
+          <p>
+            {{ form.skin_rash() }} {{ form.skin_rash.label }}
+          </p>
+          <p>
+            {{ form.lesion() }} {{ form.lesion.label }}
+          </p>
+          <p><b>Hematological:</b></p>
+          <p>
+            {{ form.easily_bleeds() }} {{ form.easily_bleeds.label }}
+          </p>
+          <p>
+            {{ form.bruises() }} {{ form.bruises.label }}
+          </p>
+          <p>
+            {{ form.blood_clots() }} {{ form.blood_clots.label }}
+          </p>
+          <p><b>Skeletalmusculary:</b></p>
+          <p>
+            {{ form.joint_pain() }} {{ form.joint_pain.label }}
+          </p>
+          <p>
+            {{ form.muscle_pain() }} {{ form.muscle_pain.label }}
+          </p>
+      <hr>
+          <p>
+            {{ form.surgeries.label }}<br>
+            {{ form.surgeries(size=32) }}
+          </p>
+          <p>
+            {{ form.medication_allergies.label }}<br>
+            {{ form.medication_allergies(size=32) }}
+          </p>
+          <p>
+            {{ form.family_medical_problems.label }}<br>
+            {{ form.family_medical_problems(size=32) }}
+          </p>
+          <p>
+            {{ form.current_medications.label }}<br>
+            {{ form.current_medications(size=32) }}
+          </p>
+          <p>
+            {{ form.other_information.label }}<br>
+            {{ form.other_information(size=32) }}
+          </p>
+          <p>
+            *{{ form.patient_signature.label }}<br>
+            {{ form.patient_signature(size=32) }}
+            {% for error in form.patient_signature.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>{{ form.submit() }}</p>
+          </form>
+        </div>
+    </div>
+{% endblock %}
