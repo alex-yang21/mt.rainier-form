@@ -99,7 +99,7 @@ class Form(db.Model):
     weight = db.Column(db.Integer)
     hand = db.Column(db.String(10))
     referred_by = db.Column(db.String(1000))
-    reason_for_visit = db.Column(db.String(100000))
+    reason_for_visit = db.Column(db.String(10000))
     #symptoms
     limb_jerking = db.Column(db.String(20))
     tremors = db.Column(db.String(20))
