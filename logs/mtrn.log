@@ -38,3 +38,4 @@ Traceback (most recent call last):
 TypeError: index() takes 0 positional arguments but 1 was given
 2020-01-17 13:41:53,283 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
 2020-01-17 14:10:21,373 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
+2020-02-02 15:20:51,966 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
