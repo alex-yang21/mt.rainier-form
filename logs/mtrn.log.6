@@ -1,0 +1,87 @@
+2020-01-10 00:48:20,878 ERROR: Exception on /index [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 39 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 42, in index
+    db.session.commit()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2254, in flush
+    self._flush(objects)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2344, in _flush
+    flush_context.execute()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 39 - probably unsupported type. [SQL: 'INSERT INTO form (timestamp, user_id, patient_name, sex, age, height, weight, hand, referred_by, reason_for_visit, limb_jerking, tremors, depression, headaches, sleep_difficulties, increased_stress, memory_problems, back_neck_pain, numbness, numbness_optional, head_injury, dizziness, unsteady_gait, balance_difficulties, fainting, word_finding, episodes_of_confusion, hospital_recently, medication_change, other_symptoms, hypertension, heart_problems, diabetes_mellitus, high_cholesterol, stroke, seizure, depression_disease, migraine, cigarettes, cigarettes_long, cigarettes_frequency, alcohol, drugs, surgeries, medication_allergies, family_medical_problems) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('2020-01-10 08:48:20.871724', 1, 'Alex', 'Male', 20, "5'8''", 150, 'Right', 'Dr. Ma', 'Headache', 'No', 'No', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'Yes', 'No', '', 'No', 'No', 'No', 'Yes', 'Yes', 'No', 'No', 'Yes', 'No', '', 'No', 'Yes', 'No', 'No', 'Yes', 'No', 'Yes', 'No', 'Yes', <wtforms.fields.core.StringField object at 0x1066d27f0>, <wtforms.fields.core.StringField object at 0x1066d2630>, 'No', 'No', 'hernia', 'lactose', 'none')] (Background on this error at: http://sqlalche.me/e/rvf5)
+2020-01-10 03:55:31,371 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 03:58:05,777 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 12:34:22,777 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 12:37:26,260 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 12:47:38,324 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 12:47:51,942 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 12:48:03,333 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 12:48:11,811 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 13:05:58,473 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 13:06:02,999 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:26:19,305 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:26:31,287 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:26:38,756 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:27:54,579 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:30:17,558 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]

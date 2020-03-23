@@ -1,0 +1,120 @@
+2020-01-11 23:24:31,198 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 73, in followup
+    submit = FollowUp(patient_name=f.patient_name.data, overall_problem=f.overall_problem.data, headaches=f.headaches.data,
+NameError: name 'FollowUp' is not defined
+2020-01-11 23:25:00,639 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:25:04,354 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 91, in followup
+    author=current_user)
+  File "<string>", line 4, in __init__
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/state.py", line 417, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/state.py", line 414, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 699, in _declarative_constructor
+    (k, cls_.__name__))
+TypeError: 'dizziness' is an invalid keyword argument for FollowUp
+2020-01-11 23:26:58,917 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:27:07,746 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 91, in followup
+    author=current_user)
+  File "<string>", line 4, in __init__
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/state.py", line 417, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/state.py", line 414, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py", line 699, in _declarative_constructor
+    (k, cls_.__name__))
+TypeError: 'dizziness' is an invalid keyword argument for FollowUp
+2020-01-12 01:30:20,057 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 01:50:40,109 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 01:52:14,019 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 01:52:32,438 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 02:24:59,982 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 02:25:46,813 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 02:53:56,708 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 14:36:43,893 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 14:40:44,282 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 14:40:56,409 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-12 14:46:59,680 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-16 13:43:21,013 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
+2020-01-16 13:44:20,917 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
+2020-01-16 13:50:10,332 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:76]
+2020-01-16 13:50:42,779 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:76]
+2020-01-16 14:11:02,475 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:57]
+2020-01-16 14:13:18,577 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:57]
+2020-01-16 14:14:25,503 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:57]
+2020-01-16 14:16:48,099 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
+2020-01-16 14:17:12,711 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:56]
+2020-01-16 14:17:19,449 ERROR: Exception on /admin/patient registration/ [GET] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_admin/base.py", line 69, in inner
+    return self._run_view(f, *args, **kwargs)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_admin/base.py", line 368, in _run_view
+    return fn(self, *args, **kwargs)
+TypeError: index() takes 0 positional arguments but 1 was given
