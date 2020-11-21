@@ -1,0 +1,25 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <h1>Admin Portal</h1>
+  <p> Here you can perform many different tasks. To go back to the form website click
+    <b><a href="{{ url_for('main.index') }}">here.</a></b>
+  </p>
+  <p> To reaccess this page, use this url: https://flask-mtrainierneurology.herokuapp.com/admin and input the correct credentials.
+  <hr>
+  <h3>Viewing Patients Records</h3>
+  <p> To view the patient records in a quick copy and paste fashion click on the patient registration and patient follow-up tabs respectively.
+  </p>
+  <hr>
+  <h3>Deleting Patients Records</h3>
+  <p> To delete records, go to the form (represents the patient registration forms) and the follow up tabs, which brings you to a table.</p>
+  <p> On the left-hand side, check all the forms you want to delete, and then find the "with selected" button. Once you have this, click
+      that and choose delete.
+  <p> Once the data is deleted, it cannot be retrieved. </p>
+  <hr>
+  <h3> Other Information</h3>
+  <p> You can also look at the table and sort the information or search if needed. You can manually create entries as well, though this may
+      not be necessary. </p>
+  <p> You can also look at the user database, although I recommend only using one user for the office to make things simpler. </p>
+
+{% endblock %}

@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Patient Follow Up Visit Questionaire</h1>
+    <p> Please complete form to the best of your knowledge.
+        All information is confidential.
+    </p>
+    <p>*indicates required fields -- all yes/no questions are required.</p>
+    <div class="row">
+        <div class="col-md-4">
+          <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <p>
+              *{{ form.patient_name.label }}<br>
+              {{ form.patient_name(size=32) }}
+              {% for error in form.patient_name.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.overall_problem.label }}<br>
+              {{ form.overall_problem(size=32) }}
+              {% for error in form.overall_problem.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+        <hr>
+          <p>
+            *{{ form.headaches.label }}<br>
+            {{ form.headaches(size=32) }}
+            {% for error in form.headaches.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.headaches_frequency.label }}<br>
+            {{ form.headaches_frequency(size=32) }}
+          </p>
+          <p>
+            {{ form.headaches_length.label }}<br>
+            {{ form.headaches_length(size=32) }}
+          </p>
+          <p><b>If applicable, is the headache associated with seeing flashes of light or spots??</b></p>
+          <p>
+            {{ form.headaches_flashes.label }}<br>
+            {{ form.headaches_flashes(size=32) }}
+          </p>
+          <p>
+            {{ form.headaches_spots.label }}<br>
+            {{ form.headaches_spots(size=32) }}
+          </p>
+          <p>
+            {{ form.headaches_medication.label }}<br>
+            {{ form.headaches_medication(size=32) }}
+          </p>
+        <hr>
+          <p>
+            *{{ form.dizziness.label }}<br>
+            {{ form.dizziness(size=32) }}
+            {% for error in form.dizziness.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            *{{ form.unsteady_gait.label }}<br>
+            {{ form.unsteady_gait(size=32) }}
+            {% for error in form.unsteady_gait.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+        <hr>
+          <p>
+            *{{ form.neck_pain.label }}<br>
+            {{ form.neck_pain(size=32) }}
+            {% for error in form.neck_pain.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If yes, where does the pain radiate?</b></p>
+          <p>{{ form.neck_pain_shoulders() }} {{ form.neck_pain_shoulders.label }}</p>
+          <p>{{ form.neck_pain_arms() }} {{ form.neck_pain_arms.label }}</p>
+        <hr>
+          <p>
+            *{{ form.back_pain.label }}<br>
+            {{ form.back_pain(size=32) }}
+            {% for error in form.back_pain.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If yes, where does the pain radiate?</b></p>
+          <p>{{ form.back_pain_hips() }} {{ form.back_pain_hips.label }}</p>
+          <p>{{ form.back_pain_legs() }} {{ form.back_pain_legs.label }}</p>
+          <p><b>If yes, which side? Check both left and right if both sides. </b></p>
+          <p>{{ form.back_pain_left_side() }} {{ form.back_pain_left_side.label }}</p>
+          <p>{{ form.back_pain_right_side() }} {{ form.back_pain_right_side.label }}</p>
+        <hr>
+          <p>
+            *{{ form.arm_pain.label }}<br>
+            {{ form.arm_pain(size=32) }}
+            {% for error in form.arm_pain.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If yes, which side? Check both left and right if both sides. </b></p>
+          <p>{{ form.arm_pain_left_side() }} {{ form.arm_pain_left_side.label }}</p>
+          <p>{{ form.arm_pain_right_side() }} {{ form.arm_pain_right_side.label }}</p>
+        <hr>
+          <p>
+            *{{ form.leg_pain.label }}<br>
+            {{ form.leg_pain(size=32) }}
+            {% for error in form.leg_pain.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If yes, which side? Check both left and right if both sides. </b></p>
+          <p>{{ form.leg_pain_left_side() }} {{ form.leg_pain_left_side.label }}</p>
+          <p>{{ form.leg_pain_right_side() }} {{ form.leg_pain_right_side.label }}</p>
+        <hr>
+          <p><b>*Do you have any numbness or tingling? If so, check all that apply. </b></p>
+          <p>{{ form.fingers() }} {{ form.fingers.label }}</p>
+          <p>{{ form.hands() }} {{ form.hands.label }}</p>
+          <p>{{ form.feet() }} {{ form.feet.label }}</p>
+          <p>{{ form.legs() }} {{ form.legs.label }}</p>
+          <p><b>If you do experience numbness/tingling, which side? Check both left and right if both sides. </b></p>
+          <p>{{ form.numbness_left_side() }} {{ form.numbness_left_side.label }}</p>
+          <p>{{ form.numbness_right_side() }} {{ form.numbness_right_side.label }}</p>
+        <hr>
+          <p>
+            {{ form.fainting.label }}<br>
+            {{ form.fainting(size=32) }}
+            {% for error in form.fainting.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If you do have these episodes please answer the following questions: </b></p>
+          <p>
+            {{ form.fainting_frequency.label }}<br>
+            {{ form.fainting_frequency(size=32) }}
+          </p>
+          <p>
+            {{ form.fainting_length.label }}<br>
+            {{ form.fainting_length(size=32) }}
+          </p>
+        <hr>
+          <p>
+            *{{ form.seizure.label }}<br>
+            {{ form.seizure(size=32) }}
+            {% for error in form.seizure.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If you do have these episodes please answer the following questions: </b></p>
+          <p>
+            {{ form.seizure_frequency.label }}<br>
+            {{ form.seizure_frequency(size=32) }}
+          </p>
+          <p>
+            {{ form.seizure_length.label }}<br>
+            {{ form.seizure_length(size=32) }}
+          </p>
+          <p>
+            {{ form.seizure_medication.label }}<br>
+            {{ form.seizure_medication(size=32) }}
+          </p>
+        <hr>
+          <p>
+            *{{ form.limb_jerking.label }}<br>
+            {{ form.limb_jerking(size=32) }}
+            {% for error in form.limb_jerking.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            *{{ form.tremors.label }}<br>
+            {{ form.tremors(size=32) }}
+            {% for error in form.tremors.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p><b>If you do have tremors please answer the following questions: </b></p>
+          <p><b>Where do you have tremors? </b></p>
+          <p>
+            {{ form.tremors_legs.label }}<br>
+            {{ form.tremors_legs(size=32) }}
+          </p>
+          <p>
+            {{ form.tremors_hands.label }}<br>
+            {{ form.tremors_hands(size=32) }}
+          </p>
+          <p>
+            {{ form.tremors_positions.label }}<br>
+            {{ form.tremors_positions(size=32) }}
+          </p>
+        <hr>
+          <p>
+            *{{ form.sleep_difficulties.label }}<br>
+            {{ form.sleep_difficulties(size=32) }}
+            {% for error in form.sleep_difficulties.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            *{{ form.increased_stress.label }}<br>
+            {{ form.increased_stress(size=32) }}
+            {% for error in form.increased_stress.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+        <hr>
+          <p>
+            *{{ form.episodes_of_confusion.label }}<br>
+            {{ form.episodes_of_confusion(size=32) }}
+            {% for error in form.episodes_of_confusion.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.episodes_of_confusion_optional.label }}<br>
+            {{ form.episodes_of_confusion_optional(size=32) }}
+          </p>
+        <hr>
+          <p>
+            *{{ form.memory_problems.label }}<br>
+            {{ form.memory_problems(size=32) }}
+            {% for error in form.memory_problems.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+        <hr>
+          <p>
+            *{{ form.hospital_recently.label }}<br>
+            {{ form.hospital_recently(size=32) }}
+            {% for error in form.hospital_recently.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.hospital_recently_optional.label }}<br>
+            {{ form.hospital_recently_optional(size=32) }}
+          </p>
+        <hr>
+          <p>
+            *{{ form.medication_change.label }}<br>
+            {{ form.medication_change(size=32) }}
+            {% for error in form.medication_change.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.medication_change_optional.label }}<br>
+            {{ form.medication_change_optional(size=32) }}
+          </p>
+          <p>{{ form.submit() }}</p>
+          </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+2020-01-10 00:43:44,754 ERROR: Exception on /user/Alex [GET] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: form.cigarettes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 51, in user
+    forms = user.forms[::-1]
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/dynamic.py", line 256, in __getitem__
+    return self._clone(sess).__getitem__(index)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2615, in __getitem__
+    return list(res)[None:None:item.step]
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2925, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2948, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: form.cigarettes [SQL: 'SELECT form.id AS form_id, form.timestamp AS form_timestamp, form.user_id AS form_user_id, form.patient_name AS form_patient_name, form.sex AS form_sex, form.age AS form_age, form.height AS form_height, form.weight AS form_weight, form.hand AS form_hand, form.referred_by AS form_referred_by, form.reason_for_visit AS form_reason_for_visit, form.limb_jerking AS form_limb_jerking, form.tremors AS form_tremors, form.depression AS form_depression, form.headaches AS form_headaches, form.sleep_difficulties AS form_sleep_difficulties, form.increased_stress AS form_increased_stress, form.memory_problems AS form_memory_problems, form.back_neck_pain AS form_back_neck_pain, form.numbness AS form_numbness, form.numbness_optional AS form_numbness_optional, form.head_injury AS form_head_injury, form.dizziness AS form_dizziness, form.unsteady_gait AS form_unsteady_gait, form.balance_difficulties AS form_balance_difficulties, form.fainting AS form_fainting, form.word_finding AS form_word_finding, form.episodes_of_confusion AS form_episodes_of_confusion, form.hospital_recently AS form_hospital_recently, form.medication_change AS form_medication_change, form.other_symptoms AS form_other_symptoms, form.hypertension AS form_hypertension, form.heart_problems AS form_heart_problems, form.diabetes_mellitus AS form_diabetes_mellitus, form.high_cholesterol AS form_high_cholesterol, form.stroke AS form_stroke, form.seizure AS form_seizure, form.depression_disease AS form_depression_disease, form.migraine AS form_migraine, form.cigarettes AS form_cigarettes, form.cigarettes_long AS form_cigarettes_long, form.cigarettes_frequency AS form_cigarettes_frequency, form.alcohol AS form_alcohol, form.drugs AS form_drugs, form.surgeries AS form_surgeries, form.medication_allergies AS form_medication_allergies, form.family_medical_problems AS form_family_medical_problems \nFROM form \nWHERE ? = form.user_id'] [parameters: (1,)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2020-01-10 00:43:56,646 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 00:44:05,308 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 00:44:09,781 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 00:44:50,179 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-10 00:45:46,062 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]

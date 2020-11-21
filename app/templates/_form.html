@@ -1,0 +1,246 @@
+<table class="table table-hover">
+     <tr>
+         <td>
+           Date: <b>{{ form.timestamp }}</b>
+             <br>
+             <b>Patient name: {{ form.patient_name }}</b>
+             <br>
+             <b>Sex: {{ form.sex }}</b>
+             <br>
+             <b>Date of Birth: {{ form.date_of_birth }}</b>
+             <br>
+             <b>Age: {{ form.age }}</b>
+             <br>
+             <b>Weight: {{ form.weight }}</b>
+             <br>
+             <b>Height: {{ form.height }}</b>
+             <br>
+             <b>Hand: {{ form.hand }}</b>
+             <br>
+             <b>Occupation: {{ form.occupation }}</b>
+             <br>
+             <b>Referred by: {{ form.referred_by }}</b>
+             <br>
+             <b>Reason for visit: {{ form.reason_for_visit }}</b>
+             <br>
+          <hr>
+             <b>Symptoms:</b>
+             <br>
+             <b>Limb jerking: {{ form.limb_jerking }}</b>
+             <br>
+             <b>Tremors: {{ form.tremors }}</b>
+             <br>
+             <b>Feelings of unhappiness/depression: {{ form.depression }}</b>
+             <br>
+             <b>Headaches: {{ form.headaches }}</b>
+             <br>
+             <b>Sleep difficulties: {{ form.sleep_difficulties }}</b>
+             <br>
+             <b>Increased stress: {{ form.increased_stress }}</b>
+             <br>
+             <b>Memory problems: {{ form.memory_problems }}</b>
+             <br>
+             <b>Back/neck pain: {{ form.back_neck_pain }}</b>
+             <br>
+             <b>Numbness/tingling in limbs: {{ form.numbness }}</b>
+             <br>
+             <b>If yes please describe: {{ form.numbness_optional }}</b>
+             <br>
+             <b>Head injury or concussion: {{ form.head_injury }}</b>
+             <br>
+             <b>Dizziness: {{ form.dizziness }}</b>
+             <br>
+             <b>Unsteady gait: {{ form.unsteady_gait }}</b>
+             <br>
+             <b>Balance difficulties: {{ form.balance_difficulties }}</b>
+             <br>
+             <b>Episodes of fainting/blackout: {{ form.fainting }}</b>
+             <br>
+             <b>Episodes of difficulty finding words: {{ form.word_finding }}</b>
+             <br>
+             <b>Episodes of confusion: {{ form.episodes_of_confusion }}</b>
+             <br>
+             <b>Have you visited the ER/Hospital recently? {{ form.hospital_recently }}</b>
+             <br>
+             <b>Have you recently had any medication changes? {{ form.medication_change }}</b>
+             <br>
+             <b>Other symptoms not listed: {{ form.other_symptoms }}</b>
+             <br>
+          <hr>
+             <b>Diseases:</b>
+             <br>
+             <b>Hypertension: {{ form.hypertension }}</b>
+             <br>
+             <b>Heart problems: {{ form.heart_problems }}</b>
+             <br>
+             <b>Diabetes mellitus: {{ form.diabetes_mellitus }}</b>
+             <br>
+             <b>High cholesterol: {{ form.high_cholesterol }}</b>
+             <br>
+             <b>Stroke: {{ form.stroke }}</b>
+             <br>
+             <b>Seizure: {{ form.seizure }}</b>
+             <br>
+             <b>Depression: {{ form.depression_disease }}</b>
+             <br>
+             <b>Migraine: {{ form.migraine }}</b>
+          <hr>
+             <b>Habits:</b>
+             <br>
+             <b>Do you smoke cigarettes? {{ form.cigarettes }}</b>
+             <br>
+             <b>If yes, for how long have you been smoking? {{ form.cigarettes_long }}</b>
+             <br>
+             <b>If yes, how frequently? {{ form.cigarettes_frequency }}</b>
+             <br>
+             <b>Do you drink alcoholic beverages? {{ form.alcohol }}</b>
+             <br>
+             <b>Do you use recreational drugs? {{ form.drugs }}</b>
+             <br>
+          <hr>
+             <b>Do you have any medical symptoms related to the following systems, check and add as needed.</b>
+             <br>
+             <b>Constitutional:</b>
+             <br>
+             <script>
+                if ({{ form.weight_loss }} == 1) {
+                  document.write('Recent weight loss')
+                  document.write('<br/>')
+                }
+                if ({{ form.fever }} == 1) {
+                  document.write('Fever')
+                }
+             </script>
+             <br>
+             <b>Cardiovascular:</b>
+             <br>
+             <script>
+                if ({{ form.palpitation }} == 1) {
+                  document.write('Palpitation')
+                  document.write('<br/>')
+                }
+                if ({{ form.chest_pain }} == 1) {
+                  document.write('Chest pain')
+                }
+             </script>
+             <br>
+             <b>Pulmonary:</b>
+             <br>
+             <script>
+                if ({{ form.cough }} == 1) {
+                  document.write('Cough')
+                  document.write('<br/>')
+                }
+                if ({{ form.sputum }} == 1) {
+                  document.write('Sputum')
+                }
+             </script>
+             <br>
+             <b>Gastrointestinal:</b>
+             <br>
+             <script>
+                if ({{ form.abdominal_pain }} == 1) {
+                  document.write('Abdominal pain')
+                  document.write('<br/>')
+                }
+                if ({{ form.nausea }} == 1) {
+                  document.write('Nausea')
+                  document.write('<br/>')
+                }
+                if ({{ form.vomiting }} == 1) {
+                  document.write('Vomiting')
+                  document.write('<br/>')
+                }
+                if ({{ form.diarrhea }} == 1) {
+                  document.write('Diarrhea')
+                }
+             </script>
+             <br>
+             <b>Genital urinary:</b>
+             <br>
+             <script>
+                if ({{ form.hematuria }} == 1) {
+                  document.write('Hematuria')
+                  document.write('<br/>')
+                }
+                if ({{ form.urination_incontinence }} == 1) {
+                  document.write('Urination incontinence')
+                }
+             </script>
+             <br>
+             <b>Endocrinological:</b>
+             <br>
+             <script>
+                if ({{ form.over_eating }} == 1) {
+                  document.write('Over eating')
+                  document.write('<br/>')
+                }
+                if ({{ form.over_sweating }} == 1) {
+                  document.write('Over sweating')
+                  document.write('<br/>')
+                }
+                if ({{ form.over_urinating }} == 1) {
+                  document.write('Over urinating')
+                  document.write('<br/>')
+                }
+                if ({{ form.always_thirsty }} == 1) {
+                  document.write('Always thirsty')
+                }
+             </script>
+             <br>
+             <b>Dermatological:</b>
+             <br>
+             <script>
+                if ({{ form.skin_rash }} == 1) {
+                  document.write('Skin rash')
+                  document.write('<br/>')
+                }
+                if ({{ form.lesion }} == 1) {
+                  document.write('Lesion')
+                }
+             </script>
+             <br>
+             <b>Hematological:</b>
+             <br>
+             <script>
+                if ({{ form.easily_bleeds }} == 1) {
+                  document.write('Easily bleeds')
+                  document.write('<br/>')
+                }
+                if ({{ form.bruises }} == 1) {
+                  document.write('Bruises')
+                  document.write('<br/>')
+                }
+                if ({{ form.blood_clots }} == 1) {
+                  document.write('Blood clots')
+                }
+             </script>
+             <br>
+             <b>Skeletalmusculary:</b>
+             <br>
+             <script>
+                if ({{ form.joint_pain }} == 1) {
+                  document.write('Joint pain')
+                  document.write('<br/>')
+                }
+                if ({{ form.muscle_pain }} == 1) {
+                  document.write('Muscle pain')
+                }
+             </script>
+             <br>
+          <hr>
+             <b>Please list any surgeries: {{ form.surgeries }}</b>
+             <br>
+             <b>Please list any medication allergies: {{ form.medication_allergies }}</b>
+             <br>
+             <b>Please list any family medical problems: {{ form.family_medical_problems }}</b>
+             <br>
+             <b>Please list all the medications you are currently taking: {{ form.current_medications }}</b>
+             <br>
+             <b>Any other information you would like the doctor to know? {{ form.other_information }}</b>
+             <br>
+             <b>Patient signature. Please type first and last name: {{ form.patient_signature }}</b>
+             <br>
+         </td>
+     </tr>
+ </table>

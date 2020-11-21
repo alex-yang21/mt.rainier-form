@@ -1,0 +1,115 @@
+2020-01-11 22:46:28,922 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 73, in followup
+    submit = FollowUp(patient_name=f.patient_name.data, overall_problem=f.overall_problem.data, headaches=f.headaches.data,
+NameError: name 'FollowUp' is not defined
+2020-01-11 22:46:33,651 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 73, in followup
+    submit = FollowUp(patient_name=f.patient_name.data, overall_problem=f.overall_problem.data, headaches=f.headaches.data,
+NameError: name 'FollowUp' is not defined
+2020-01-11 22:48:00,574 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:48:56,237 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:57:57,731 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:58:17,536 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:58:27,552 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 22:59:05,346 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:00:04,562 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:06:45,838 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 73, in followup
+    submit = FollowUp(patient_name=f.patient_name.data, overall_problem=f.overall_problem.data, headaches=f.headaches.data,
+NameError: name 'FollowUp' is not defined
+2020-01-11 23:09:08,620 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:09:35,435 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 73, in followup
+    submit = FollowUp(patient_name=f.patient_name.data, overall_problem=f.overall_problem.data, headaches=f.headaches.data,
+NameError: name 'FollowUp' is not defined
+2020-01-11 23:16:23,866 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:16:29,362 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:17:40,691 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:17:48,316 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:17:55,271 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:18:05,654 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:21:31,641 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:21:49,385 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:21:52,943 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:22:15,883 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:23:27,085 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
+2020-01-11 23:24:02,966 ERROR: Exception on /followup [POST] [in /Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/AlexYang/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/AlexYang/mt.rainier-form/app/main/routes.py", line 73, in followup
+    submit = FollowUp(patient_name=f.patient_name.data, overall_problem=f.overall_problem.data, headaches=f.headaches.data,
+NameError: name 'FollowUp' is not defined
+2020-01-11 23:24:25,027 INFO: Mt Rainier startup [in /Users/AlexYang/mt.rainier-form/app/__init__.py:52]
